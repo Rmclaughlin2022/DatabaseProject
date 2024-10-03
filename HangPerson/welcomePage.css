@@ -1,0 +1,110 @@
+.head {
+    font-family: "Times New Roman", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, serif;
+    background-color: lightgray
+}
+.head h1 {
+    color: #7B92AA;
+    font-size: 70px;
+    text-align: center;
+    padding-top: 30px;
+}
+.head p {
+    color: #7B92AA;
+    font-size: 40px;
+    text-align: center;
+    padding-bottom:30px; 
+}
+.buttons {
+    display: flex;
+    justify-content: center; 
+    gap: 100px; 
+    margin-top: 20px;
+}
+.settingsButton
+{
+    color: white;
+    padding: 10px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    background-size: contain;
+    background-position: center; /* center image in the button */
+    background-repeat: no-repeat;
+    width: 100px; 
+    height: 100px; 
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    padding-top: 350px;
+    font-size: 30px;
+    font-family: "Times New Roman", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, serif;
+}
+
+.womanButton, .manButton {
+    color: white;
+    padding: 10px 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-size: cover; /*background image covers the button */
+    background-position: center; /* center image in the button */
+    width: 200px; 
+    height: 250px; 
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    padding-top: 350px;
+    font-size: 30px;
+    font-family: "Times New Roman", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, serif;
+}
+.womanButton {
+    background-color: #DEC4D6;
+    border: 20px solid #DEC4D6;
+    border-radius: 10px;
+    background-image: url(snoopDoggreligious.png); 
+    max-width: 80%; 
+    max-height: 80%; 
+    margin-bottom: 10px;
+}
+.manButton {
+    background-color: #A4CCE3;
+    border: 20px solid #A4CCE3;
+    border-radius: 10;
+    background-image: url(snoopDoggreligious.png); 
+    max-width: 80%; 
+    max-height: 80%; 
+    margin-bottom: 10px;
+}
+.settingsButton{
+ 
+    background-image: url(settingscog.png); 
+    max-width: 100%; 
+    max-height: 100%; 
+    margin-bottom: 10px;
+}
+.womanButton:hover, .manButton:hover {
+    transform: scale(1.01); /*increase button size on hover */
+}
+.button-text-W {
+    background-color: #DEC4D6;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+}
+.button-text-M {
+    background-color: #A4CCE3;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 10px;
+}
+body {
+    background-color: whitesmoke;
+}
+p {
+    color: #7B92AA; 
+    text-align: center; 
+    margin-top: 40px; 
+    font-size: 20px;
+}
+.settings-cog { 
+   
+}
