@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="welcomePage.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: flex-start; 
+            text-align: center; 
+        }
+        h1{
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        header {
+            margin-top: 20px; 
+            width: 100%; 
+        }
+
+        audio {
+            display: none;
+        }
+
+        .music-label {
+            font-size: 40px; 
+            margin: 200px auto 10px; 
+            width: fit-content; 
+          
+        }
+
+        #music-slider {
+            display: block; 
+            margin: 0 auto 40px; 
+            width: 100%;
+            color: green;
+        }
+
+        .soundeffects-label {
+            font-size: 40px; 
+            margin: 200px auto 10px; 
+            width: fit-content; 
+        }
+        #soundE-slider {
+            display: block; 
+            margin: 0 auto 40px; 
+            width: 100%;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><b>Settings</b></h1>
+    </header>
+    <audio id="audio" autoplay loop>
+        <source src="LobbyMusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="SEaudio" autoplay loop>
+        <source src="SEmusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+<div class= 'SettingSliders'>
+    <label for="music-slider" class="music-label">Music</label>
+    <input type="range" id="music-slider" min="0" max="1" step="0.01" value="0.5">
+    
+    <label for="soundE-slider" class="soundeffects-label">Sound Effects</label>
+    <input type="range" id="soundE-slider" min="0" max="1" step="0.01" value="0.5">
+</div>
+    <script>
+        const audio = document.getElementById('audio');
+        const musicSlider = document.getElementById('music-slider');
+
+        const SEaudio = document.getElementById('SEaudio');
+        const soundEslider = document.getElementById('soundE-slider')
+
+        SEaudio.volume = soundEslider.value;
+        audio.volume = musicSlider.value;
+
+
+        musicSlider.addEventListener('input', (event) => {
+            audio.volume = event.target.value;
+        });
+        soundEslider.addEventListener('input', (event) => {
+            SEaudio.volume = event.target.value;
+        });
+    </script>
+    <div class="buttons">
+        <a href="welcomePage.html">
+            <button class="LobbyButton"> Back To Lobby </button>
+        </a>
+    </div>
+</body>
+</html>

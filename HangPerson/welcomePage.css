@@ -2,17 +2,18 @@
     font-family: 'Comic Sans MS', cursive, sans-serif;
     background-color: black;
     width: fit-content;
-    margin-left: 300px;
+    margin-left: 450px;
 }
 .head h1 {
     color: white;
-    font-size: 70px;
+    font-size: 50px;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 10px;
+    margin: 0;
 }
 .head p {
     color: white;
-    font-size: 40px;
+    font-size: 25px;
     text-align: center;
     padding-bottom:30px; 
 }
@@ -21,23 +22,44 @@
     flex-direction: column; 
     align-items: center; 
 }
-.settingsButton
-{
-    color: white;
-    padding: 10px 40px;
-    font-size: 16px;
+.settingsButton {
     cursor: pointer;
+    background-image: url(settingscog.png);
     background-size: contain;
-    background-position: center; /* center image in the button */
+    background-position: center;
     background-repeat: no-repeat;
+    border: none;
     width: 100px; 
-    height: 100px; 
+    height: 100px;
+    padding: 0;
+    margin-bottom: 10px;
+    color: transparent; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.SettingSliders{
+font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: black;
+    height: 0px;
+}
+
+.LobbyButton {
+    color: black; 
+    background-color: white; 
+    font-size: 16px;
+    border-radius: 10px black;
+    cursor: pointer;
+    width: 350px; 
+    height: 120px; 
     display: flex;
-    align-items: left;
+    align-items: center;
     justify-content: center;
-    padding-top: 350px;
     font-size: 30px;
-    font-family: "Times New Roman", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    border: 5px solid black; 
+    margin: 400px; 
 }
 
 .womanButton, .manButton {
@@ -63,7 +85,7 @@
     max-height: 100%; 
     margin-bottom: 10px;
 }
-.womanButton:hover, .manButton:hover {
+.womanButton:hover, .manButton:hover, .settingsButton:hover, .LobbyButton:hover {
     transform: scale(1.01); /*increase button size on hover */
 }
 body {
@@ -79,6 +101,6 @@ p {
     margin-top: 40px; 
     font-size: 20px;
 }
-.settings-cog { 
-   
+a {
+    text-decoration: none;
 }
