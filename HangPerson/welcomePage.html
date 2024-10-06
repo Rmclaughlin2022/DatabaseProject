@@ -6,24 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
     <link rel="stylesheet" href="welcomePage.css">
-
-    <div class="head">
-        <h1>Welcome to HangPerson!</h1>
-        <p><b>Continue by choosing HangWoman or HangMan: </b></p>
-    </div>
 </head>
 
 <body>
+    <div class="head">
+        <h1>Welcome to HangPerson!</h1>
+        <p><b>Continue by choosing HangWoman or HangMan:</b></p>
+    </div>
+
+    <audio id="background-audio" autoplay loop>
+        <source src="LobbyMusic.mp3" type="audio/mpeg">
+    </audio>
+
     <div class="buttons">
-        <button class="womanButton"><span class="button-text-W">Play HangWoman!</span>
-        </button>
-        <button class="manButton"><span class="button-text-M">Play HangMan!</span>
-        </button>
-        <button class="settingsButton"><span class="settings-cog">
-        </span></button>
+        <button class="womanButton"><span class="button-text-W">Play HangWoman!</span></button>
+        <button class="manButton"><span class="button-text-M">Play HangMan!</span></button>
+        <a href="Settings.html">
+            <button class="settingsButton"></button> <!-- No text, just the image -->
+        </a>        
+            </button>
+        </a>
+        
     </div>
 
     <p>Ashleigh Johnson and Ryan McLaughlin</p>
+
+    <script>
+        const audio = document.getElementById('background-audio');
+
+        audio.volume = 0.5;
+    </script>
 </body>
 
 </html>
