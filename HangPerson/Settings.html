@@ -37,7 +37,6 @@
             font-size: 40px; 
             margin: 200px auto 10px; 
             width: fit-content; 
-          
         }
 
         #music-slider {
@@ -58,45 +57,68 @@
             width: 100%;
             color: green;
         }
+
+        #playMusicButton {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1><b>Settings</b></h1>
     </header>
-    <audio id="audio" autoplay loop>
-        <source src="LobbyMusic.mp3" type="audio/mpeg">
+    <audio id="audio" loop>
+        <source src="LobbyMusic.mp3" type="audio">
         Your browser does not support the audio element.
     </audio>
-    <audio id="SEaudio" autoplay loop>
+    <audio id="SEaudio" loop>
         <source src="SEmusic.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-<div class= 'SettingSliders'>
-    <label for="music-slider" class="music-label">Music</label>
-    <input type="range" id="music-slider" min="0" max="1" step="0.01" value="0.5">
     
-    <label for="soundE-slider" class="soundeffects-label">Sound Effects</label>
-    <input type="range" id="soundE-slider" min="0" max="1" step="0.01" value="0.5">
-</div>
+    <button id="playMusicButton">Play Music</button>
+    
+    <div class= 'SettingSliders'>
+        <label for="music-slider" class="music-label">Music</label>
+        <input type="range" id="music-slider" min="0" max="1" step="0.01" value="0.5">
+        
+        <label for="soundE-slider" class="soundeffects-label">Sound Effects</label>
+        <input type="range" id="soundE-slider" min="0" max="1" step="0.01" value="0.5">
+    </div>
+
     <script>
         const audio = document.getElementById('audio');
         const musicSlider = document.getElementById('music-slider');
 
         const SEaudio = document.getElementById('SEaudio');
-        const soundEslider = document.getElementById('soundE-slider')
+        const soundEslider = document.getElementById('soundE-slider');
 
-        SEaudio.volume = soundEslider.value;
+        const playMusicButton = document.getElementById('playMusicButton');
+
+        // Set initial volumes
         audio.volume = musicSlider.value;
+        SEaudio.volume = soundEslider.value;
 
+        // Play audio when button is clicked
+        playMusicButton.addEventListener('click', () => {
+            audio.play();
+            SEaudio.play();
+            playMusicButton.style.display = 'none'; // Hide the button after music starts
+        });
 
+        // Update audio volume on slider input
         musicSlider.addEventListener('input', (event) => {
             audio.volume = event.target.value;
         });
+
         soundEslider.addEventListener('input', (event) => {
             SEaudio.volume = event.target.value;
         });
     </script>
+
     <div class ="LobbyButtonH"></div>
     <div class="buttons">
         <a href="welcomePage.html">

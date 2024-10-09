@@ -64,7 +64,26 @@ font-family: 'Comic Sans MS', cursive, sans-serif;
 .LobbyButtonH{
     height: 300px;
 }
+.HeightWidth{
+    height: -300px;
+}
+.loginButton .SignInButton {
+    color: black; 
+    background-color: white; 
+    font-size: 16px;
+    border-radius: 10px black;
+    cursor: pointer;
+    width: 200px; 
+    height: 60x; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    border: 5px solid black; 
+    margin: 30px;
 
+}
 .womanButton, .manButton {
     color: black; 
     background-color: white; 
