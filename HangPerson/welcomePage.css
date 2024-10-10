@@ -1,30 +1,70 @@
+/* Flex container for head and login/signup buttons */
+.header-container {
+    display: flex;
+    justify-content: center; /* Centers the .head horizontally */
+    align-items: center; /* Vertically aligns items */
+    width: 100%;
+    padding: 20px;
+    position: relative; /* Allows positioning of the login buttons */
+}
+
+/* .head section centered */
 .head {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     background-color: black;
-    width: fit-content;
-    
+    padding: 20px;
+    text-align: center; /* Centers the text inside the .head */
 }
+
+/* Styles for text inside head */
 .head h1 {
     color: white;
     font-size: 50px;
-    text-align: center;
-    padding-top: 10px;
     margin: 0;
 }
+
 .head p {
     color: white;
     font-size: 25px;
-    text-align: center;
-    padding-bottom:30px; 
+    margin: 0;
+    padding-top: 10px;
 }
-.buttons {
+
+/* LSButtons aligned to the right */
+.LSButtons {
+    position: absolute;
+    right: 50px; /* Adjust position as needed */
+    top: 20px; /* Keeps buttons at the same height as the header */
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: flex-end;
 }
+
+.loginButton, .SignInButton {
+    color: black;
+    background-color: rgb(246, 246, 246);
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    font-size: 30px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    border: 5px solid black;
+    margin: 20px 0;
+}
+
+/* Settings button centered */
+.settings-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .settingsButton {
     cursor: pointer;
     background-image: url(settingscog.png);
+    background-color: black;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,84 +72,29 @@
     width: 100px; 
     height: 100px;
     padding: 0;
-    margin-bottom: 10px;
     color: transparent; 
     display: flex; 
     align-items: center; 
-    justify-content: center; 
-}
-
-.SettingSliders{
-font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: black;
-    height: 0px;
-}
-
-.LobbyButton {
-    color: black; 
-    background-color: white; 
-    font-size: 16px;
-    border-radius: 10px black;
-    cursor: pointer;
-    width: 350px; 
-    height: 120px; 
-    display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 30px;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    border: 5px solid black; 
-    margin: 40px; 
 }
-.LobbyButtonH{
-    height: 300px;
-}
-.HeightWidth{
-    height: -300px;
-}
-.loginButton .SignInButton {
-    color: black; 
-    background-color: white; 
-    font-size: 16px;
-    border-radius: 10px black;
-    cursor: pointer;
-    width: 200px; 
-    height: 60x; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    border: 5px solid black; 
-    margin: 30px;
 
-}
 .womanButton, .manButton {
-    color: black; 
-    background-color: white; 
+    color: black;
+    background-color: white;
     font-size: 16px;
     border-radius: 10px black;
     cursor: pointer;
-    width: 450px; 
-    height: 120px; 
+    width: 450px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 30px;
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    border: 5px solid black; 
-    margin: 30px; 
+    border: 5px solid black;
+    margin: 30px;
 }
-.settingsButton{
- 
-    background-image: url(settingscog.png); 
-    max-width: 100%; 
-    max-height: 100%; 
-    margin-bottom: 10px;
-}
-.womanButton:hover, .manButton:hover, .settingsButton:hover, .LobbyButton:hover {
-    transform: scale(1.01); /*increase button size on hover */
-}
+
 body {
     background-image: url(treesBG.avif);
     background-repeat: no-repeat;
@@ -117,12 +102,14 @@ body {
     background-position: center;
     height: 100%;
 }
+
 p {
-    color: white; 
-    text-align: center; 
-    margin-top: 40px; 
+    color: white;
+    text-align: center;
+    margin-top: 40px;
     font-size: 20px;
 }
+
 a {
     text-decoration: none;
 }

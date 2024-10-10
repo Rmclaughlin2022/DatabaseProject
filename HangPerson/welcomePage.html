@@ -7,11 +7,24 @@
     <title>Welcome</title>
     <link rel="stylesheet" href="welcomePage.css">
 </head>
-
 <body>
-    <div class="head">
-        <h1>Welcome to HangPerson!</h1>
-        <p><b>Continue by choosing HangWoman or HangMan:</b></p>
+    
+    <!-- Flex container for head and login/signup buttons -->
+    <div class="header-container">
+        <div class="head">
+            <h1>Welcome to HangPerson!</h1>
+            <p><b>Continue by choosing HangWoman or HangMan:</b></p>
+        </div>
+
+        <!-- Login and Sign In buttons on the right -->
+        <div class="LSButtons">
+            <a href="Login.html">
+                <button class="loginButton"><span class="button-text-L">Login</span></button>
+            </a>
+            <a href="SignIn.html">
+                <button class="SignInButton"><span class="button-text-S">Sign In</span></button>
+            </a>
+        </div>
     </div>
 
     <audio id="background-audio" autoplay loop>
@@ -20,29 +33,20 @@
 
     <div class="buttons">
         <a href="hangman.html">
-        <button class="womanButton"><span class="button-text-W">Play HangWoman!</span></button>
+            <button class="womanButton"><span class="button-text-W">Play HangWoman!</span></button>
         </a>
         <a href="manHang.html">
-        <button class="manButton"><span class="button-text-M">Play HangMan!</span></button>
+            <button class="manButton"><span class="button-text-M">Play HangMan!</span></button>
         </a>
         <a href="Settings.html">
             <button class="settingsButton"></button>
-        </a>   
-    </div>
-    <div class="HeightWidth"></div>
-        <a href="Login.html"  ></a>
-    <button class="loginButton"><span class="button-text-L">Login</span></button>
         </a>
-        <a href="SignIn.html"> </a>
-    <button class="SignInButton"><span class="button-text-S">Sign In</span></button>
-    </a>
-        
+    </div>
 
     <p>Ashleigh Johnson and Ryan McLaughlin</p>
 
     <script>
-        const audio = document.getElementById('audio');
-
+        const audio = document.getElementById('background-audio');
         audio.volume = 0.5;
     </script>
 </body>
