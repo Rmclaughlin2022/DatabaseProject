@@ -1,0 +1,32 @@
+body {
+    background-image: url(treesBG.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.keyboard {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.keyboard button{
+    width: calc(100% / 9 -5px);
+    background-color: white;
+    font-size: 1rem;
+    font-weight: px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 5px solid black;
+    width: 50px;
+    height: 50px;
+}
+.keyboard button:hover {
+    background-color: #e0e0e0; 
+    transform: scale(1.1);
+}
