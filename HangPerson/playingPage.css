@@ -1,15 +1,32 @@
 body {
-    background-image: url(treesBG.avif);
+   /* background-image: url(treesBG.avif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    */
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: aliceblue;
 }
-html, body {
+    
+/*html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
-.keyboard {
+    */
+.container{
+    width: 850px;
+    display: flex;
+    gap: 70px;
+    align-items:flex-end;
+    padding: 60px 40px;
+    border-radius: 10px;
+}
+
+.keyboard .game-box {
     display: flex;
     gap: 5px;
     flex-wrap: wrap;
@@ -19,10 +36,11 @@ html, body {
     width: calc(100% / 9 -5px);
     background-color: white;
     font-size: 1rem;
-    font-weight: px;
+    font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
-    border: 5px solid black;
+    background: aqua;
+    border: 3px solid black;
     width: 50px;
     height: 50px;
 }
@@ -30,3 +48,48 @@ html, body {
     background-color: #e0e0e0; 
     transform: scale(1.1);
 }
+    
+.hangman-box img {
+    max-width: 270px;
+}
+.hangman-box h1 {
+    font-size: 1.45rem;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.word-display{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+.word-display .letter {
+width: 28px;
+font-size: 2rem;
+font-weight: 600;
+text-transform: uppercase;
+text-align: center;
+margin-bottom: 35px;
+border-bottom: 3px solid black;
+
+}
+.word-display .letter.guessed {
+    border-color: transparent;
+    margin: -40px 0 35px;
+
+}
+.game-box h4{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.game-box h4 b {
+    font-weight: 600;
+}
+.game-box .guesses-text b {
+    color: #ff0000;
+}
+
