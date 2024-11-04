@@ -48,6 +48,10 @@ html, body {
     padding: 7px;
     width: calc(100% / 9 -5px);
 }
+.keyboard button[disabled]{
+    opacity: 0.6;
+    pointer-events: none;
+}
 :where(.game-model, .keyboard) button:hover {
     background-color: #8286c9; 
     transform: scale(1.1);
@@ -102,18 +106,25 @@ border-bottom: 3px solid black;
     right: 0;
     width: 100%;
     height: 100%;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0,0,0,0.6)
-
+    background: rgba(0,0,0,0.6);
+    transition: opacity 0.4s ease;
+}
+.game-model.show {
+    opacity: 1;
+    pointer-events: auto;
 }
 .game-model .content {
     background: #fff;
     max-width: 420px;
     width: 100%;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 10px;    
     padding: 30px;
 }
 .game-model img {
