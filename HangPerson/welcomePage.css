@@ -2,7 +2,7 @@
     font-family: 'Comic Sans MS', cursive, sans-serif;
     background-color: black;
     width: fit-content;
-    
+    margin-left: 500px;
 }
 .head h1 {
     color: white;
@@ -21,9 +21,9 @@
     display: flex;
     flex-direction: column; 
     align-items: center; 
-}
-.settingsButton {
-    cursor: pointer;
+} 
+.settingsButton { 
+    cursor: pointer; 
     background-image: url(settingscog.png);
     background-size: contain;
     background-position: center;
@@ -38,13 +38,11 @@
     align-items: center; 
     justify-content: center; 
 }
-
 .SettingSliders{
 font-family: 'Comic Sans MS', cursive, sans-serif;
     background-color: black;
     height: 0px;
 }
-
 .LobbyButton {
     color: black; 
     background-color: white; 
@@ -82,7 +80,6 @@ font-family: 'Comic Sans MS', cursive, sans-serif;
     font-family: 'Comic Sans MS', cursive, sans-serif;
     border: 5px solid black; 
     margin: 30px;
-
 }
 .womanButton, .manButton {
     color: black; 
@@ -93,7 +90,7 @@ font-family: 'Comic Sans MS', cursive, sans-serif;
     width: 450px; 
     height: 120px; 
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: center;
     font-size: 30px;
     font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -101,13 +98,13 @@ font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 30px; 
 }
 .settingsButton{
- 
+    border: 5px solid black; 
     background-image: url(settingscog.png); 
     max-width: 100%; 
     max-height: 100%; 
     margin-bottom: 10px;
 }
-.womanButton:hover, .manButton:hover, .settingsButton:hover, .LobbyButton:hover {
+.womanButton:hover, .manButton:hover, .settingsButton:hover, .LobbyButton:hover, .loginButton:hover, .SignInButton:hover {
     transform: scale(1.01); /*increase button size on hover */
 }
 body {
@@ -115,7 +112,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100%;
 }
 p {
     color: white; 
@@ -125,4 +121,30 @@ p {
 }
 a {
     text-decoration: none;
+}
+.login-signup-container {
+    position: absolute;
+    top: 20px;  
+    right: 50px; 
+    display: flex;
+    gap: 10px; 
+}
+.loginButton, .SignInButton {
+    color: black; 
+    background-color: white; 
+    font-size: 16px;
+    border-radius: 10px black;
+    cursor: pointer;
+    width: 120px; 
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    border: 3px solid black; 
+    margin: 0 10px;
+}
+.button-text-L, .button-text-S {
+    font-size: 18px;
 }
